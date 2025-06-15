@@ -34,11 +34,11 @@ public class WebClientConfig {
 
     @Bean
     public WebClient dadataWebClient() {
-        return WebClient.builder()
+        WebClient.Builder builder = WebClient.builder()
                 .baseUrl(dadataUrl)
                 .defaultHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
-                .defaultHeader("Authorization", "Token " + dadataApiKey)
-                .defaultHeader("X-Secret", dadataSecretKey)
-                .build();
+                .defaultHeader("Authorization", "Token " + dadataApiKey);
+        if (dadataSecretKey != null) builder.defaultHeader("X-Secret", dadataSecretKey);
+        return builder.build();
     }
 }
