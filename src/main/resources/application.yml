@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/address_db?allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 60000
+      initialization-fail-timeout: 0
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+app:
+  yandex:
+    api-key: ${YANDEX_API_KEY:af75e74d-266e-4378-a0de-2df7527f89bf}
+    url: https://geocode-maps.yandex.ru/1.x
+  dadata:
+    api-key: ${DADATA_API_KEY:59ccbfee2b32407792e5c224193ec2aa5eaa3e5f}
+    secret-key: ${DADATA_SECRET_KEY:564c6b08117ae1c2e9b8ef7e83be0ab82c7ba3ac}
+    url: https://cleaner.dadata.ru/api/v1/clean/address
