@@ -23,12 +23,12 @@
 
 ## Быстрый запуск
 
-## 1. Клонирование репозитория
+### 1. Клонирование репозитория
 ```bash
   git clone https://github.com/awdiru/address_comparison_test_task.git
   cd address-comparison-service
 ```
-## 2. Настройка переменных окружения
+### 2. Настройка переменных окружения
 Заполните файл .env своими API ключами:
 ```evn
 # Обязательные ключи
@@ -38,15 +38,15 @@ DADATA_API_KEY=ваш_dadata_ключ
 # Опционально (если используется Dadata с секретным ключом)
 DADATA_SECRET_KEY=ваш_секретный_ключ
 ```
-## 3. Сборка проекта
+### 3. Сборка проекта
 ```bash
   mvn clean package
 ```
-## 4. Запуск системы
+### 4. Запуск системы
 ```bash
   docker-compose up --build -d
 ```
-## 5. Проверка работы через Postman:
+### 5. Проверка работы через Postman:
 1. Создать новый запрос
 2. Ввести в поле url http://localhost:8080/api/address/compare
 3. Выбрать метод POST
@@ -68,7 +68,7 @@ DADATA_SECRET_KEY=ваш_секретный_ключ
 ```
 Поле distance показывает расстояние между координатами от сервиса \
 Yandex Maps API и Dadata API в метрах
-## 6. Структура проекта
+## Структура проекта
 ```txt
 ├── src
 │   ├── main
@@ -92,7 +92,7 @@ Yandex Maps API и Dadata API в метрах
 ├── pom.xml
 └── README.md
 ```
-## 7.Управление сервисом
+## Управление сервисом
 ### Запуск
 ```bash
   docker-compose up -d
@@ -112,7 +112,7 @@ Yandex Maps API и Dadata API в метрах
     docker-compose build
     docker-compose up -d
 ```
-## 8. Доступ к базе данных
+## Доступ к базе данных
 - Хост: localhost
 - Порт: 3306
 - База данных: address_db
@@ -122,7 +122,7 @@ Yandex Maps API и Dadata API в метрах
 ```bash
     mysql -h localhost -P 3306 -u root -ppassword address_db
 ```
-## 9. API Endpoints
+## API Endpoints
 ### Основной метод
 ```
 POST /api/address/compare  - Сравнение координат адреса
