@@ -134,6 +134,6 @@ POST /api/address/compare  - Сравнение координат адреса
 ### Тело запроса:
 ```json
 {
-    "address":"Москва, Красная площадь"
+    "address":"Moscow, Red Square"
 }
 ```
