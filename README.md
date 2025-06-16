@@ -26,7 +26,7 @@
 ### 1. Клонирование репозитория
 ```bash
   git clone https://github.com/awdiru/address_comparison_test_task.git
-  cd address-comparison-service
+  cd address_comparison_test_task
 ```
 ### 2. Настройка переменных окружения
 Заполните файл .env своими API ключами:
@@ -107,10 +107,10 @@ Yandex Maps API и Dadata API в метрах
 ```
 ### Пересборка
 ```bash
-    docker-compose down
-    mvn clean package
-    docker-compose build
-    docker-compose up -d
+  docker-compose down
+  mvn clean package
+  docker-compose build
+  docker-compose up -d
 ```
 ## Доступ к базе данных
 - Хост: localhost
@@ -120,7 +120,7 @@ Yandex Maps API и Dadata API в метрах
 - Пароль: password
 ### Для подключения используйте:
 ```bash
-    mysql -h localhost -P 3306 -u root -ppassword address_db
+  mysql -h localhost -P 3306 -u root -ppassword address_db
 ```
 ## API Endpoints
 ### Основной метод
